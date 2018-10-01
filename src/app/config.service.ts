@@ -13,24 +13,15 @@ export class ConfigService {
 
  
 
-  listUrl = 'https://v10dev.yeira.training/api/v1/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiaHR0cHM6Ly92MTBkZXYueWVpcmEudHJhaW5pbmcvYXBpL3YxL2F1dGhlbnRpY2F0ZSIsImlhdCI6MTUzODE1MDg4MSwiZXhwIjoxNTM4MTU0NDgxLCJuYmYiOjE1MzgxNTA4ODEsImp0aSI6IkVYZlk3dFdMcGtIZjFuQ3cifQ.SzXWRQd1WvPFPREiF9eSikPKbFNxJA2_wX58R4BE8BM'
+  listUrl = 'https://v10dev.yeira.training/api/v1/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiaHR0cHM6Ly92MTBkZXYueWVpcmEudHJhaW5pbmcvYXBpL3YxL2F1dGhlbnRpY2F0ZSIsImlhdCI6MTUzODI3MTk4NiwiZXhwIjoxNTM4Mjc1NTg2LCJuYmYiOjE1MzgyNzE5ODYsImp0aSI6Ik5jYXFFZG1hZ09sM2ZCVEEifQ.3PNzZR4o1dchNixwaj4Xl-OGXQK9Y73JK3JQtoFDI50'
  
-  constructor(private http: HttpClient) { }
+  constructor(private http: Http) { }
 
-
-
-  getAllUsers(){
-    let usersArr: Object[] = [];
-    this.http.get(this.listUrl)
-      .toPromise()
-      .then(response => {
-        for(let i = 0; i< 10; i++){
-          usersArr.push(response.results[i])
-        }
-        // peopleArr.push(response.results)
-      })
-      console.log(usersArr)
-      return usersArr;
+  getUsers(): Observable<any>{
+    return this.http.get(this.listUrl)
+    .pipe(map((res:Response)=>res.json()))
+    
+    
   }
 
  

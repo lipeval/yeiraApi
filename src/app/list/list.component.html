@@ -1,9 +1,14 @@
 <h1>Users</h1>
 
-<ul *ngFor="let c of chars">
- <li>
-   {{c.data[0].name}}
+<ul *ngFor="let u of users">
+
+    <li>
+      {{u.data.name}}
+    </li>
+    <li>
+        {{u.data}}
+    </li>
+
    
 
- </li>
 </ul>

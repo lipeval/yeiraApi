@@ -9,12 +9,16 @@ import {ConfigService} from '../config.service';
 })
 export class ListComponent implements OnInit {
 
-  chars: Object[];
+  users: Object[];
+
   constructor(private config: ConfigService) { }
 
   ngOnInit() {
-    this.chars = this.config.getAllUsers();
-    console.log(this.chars)
+    this.config.getUsers()
+    .subscribe(users =>{
+      this.users = Array.of(JSON.stringify(users));
+      console.log(users)
+    })
   }
 
  
