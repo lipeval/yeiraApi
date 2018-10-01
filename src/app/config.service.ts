@@ -13,7 +13,7 @@ export class ConfigService {
 
  
 
-  listUrl = 'https://v10dev.yeira.training/api/v1/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiaHR0cHM6Ly92MTBkZXYueWVpcmEudHJhaW5pbmcvYXBpL3YxL2F1dGhlbnRpY2F0ZSIsImlhdCI6MTUzODI3MTk4NiwiZXhwIjoxNTM4Mjc1NTg2LCJuYmYiOjE1MzgyNzE5ODYsImp0aSI6Ik5jYXFFZG1hZ09sM2ZCVEEifQ.3PNzZR4o1dchNixwaj4Xl-OGXQK9Y73JK3JQtoFDI50'
+  listUrl = 'https://v10dev.yeira.training/api/v1/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiaHR0cHM6Ly92MTBkZXYueWVpcmEudHJhaW5pbmcvYXBpL3YxL2F1dGhlbnRpY2F0ZSIsImlhdCI6MTUzODM1NzM1MCwiZXhwIjoxNTM4MzYwOTUwLCJuYmYiOjE1MzgzNTczNTAsImp0aSI6Inh2U00zNFhCY3g5WWlwTkgifQ.VNpHv1a2uc2khrFlQZPO1l5EBpzzysv9r05_aVrOqWQ'
  
   constructor(private http: Http) { }
 
